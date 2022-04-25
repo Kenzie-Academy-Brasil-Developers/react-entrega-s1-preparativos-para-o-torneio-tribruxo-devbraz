@@ -1,0 +1,18 @@
+.red-card {
+  border: 2px solid red;
+  margin: 10px;
+  border-radius: 5px;
+  padding: 5px;
+  width: 30%;
+  height: 300px;
+}
+
+.red-card-img {
+  border-bottom: 1px solid red;
+  border-radius: 5px;
+}
+
+.red-card-house{
+  font-weight: bold;
+  color: red;
+}

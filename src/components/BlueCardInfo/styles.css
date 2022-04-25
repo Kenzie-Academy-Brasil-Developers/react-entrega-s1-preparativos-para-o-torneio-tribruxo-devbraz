@@ -1,0 +1,18 @@
+.blue-card {
+  border: 2px solid blue;
+  margin: 10px;
+  border-radius: 5px;
+  padding: 5px;
+  width: 30%;
+  height: 300px;
+}
+
+.blue-card-img{
+  border-bottom: 1px solid blue;
+  border-radius: 5px;
+}
+
+.blue-card-house{
+  font-weight: bold;
+  color: blue;
+}
