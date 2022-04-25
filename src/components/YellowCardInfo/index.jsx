@@ -2,14 +2,14 @@ import ImageComponent from '../ImageComponent'
 import './styles.css'
 
 
-function YellowCardInfo({yellowCard}) {
+function YellowCardInfo({yellowCardRandomWizzard, yellowTeamWizzardChoiced}) {
 
   return (
 
     <div className='yellow-card'>
-      <ImageComponent className='yellow-card-img' src={yellowCard.image} alt={yellowCard.name}/>
-      <p>{yellowCard.name}</p>
-      <p className='yellow-card-house'>{yellowCard.house}</p>
+      <ImageComponent className='yellow-card-img' src={yellowTeamWizzardChoiced[yellowCardRandomWizzard].image} alt={yellowTeamWizzardChoiced[yellowCardRandomWizzard].name}/>
+      <p>{yellowTeamWizzardChoiced[yellowCardRandomWizzard].name}</p>
+      <p className='yellow-card-house'>{yellowTeamWizzardChoiced[yellowCardRandomWizzard].house}</p>
     </div>
 
     

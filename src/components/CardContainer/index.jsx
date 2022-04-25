@@ -8,30 +8,30 @@ import { useState } from 'react'
 
 function CardContainer({tournamentWizzards}) {
 
-  const yellowTeam = tournamentWizzards.filter((tournamentWizzards) => tournamentWizzards.house === 'Hufflepuff' )
-  const blueTeam = tournamentWizzards.filter((tournamentWizzards) => tournamentWizzards.house === 'Slytherin' )
-  const redTeam = tournamentWizzards.filter((tournamentWizzards) => tournamentWizzards.house === 'Gryffindor' )
+  const yellowTeamWizzardChoiced = tournamentWizzards.filter((tournamentWizzards) => tournamentWizzards.house === 'Hufflepuff' )
+  const blueTeamWizzardChoiced = tournamentWizzards.filter((tournamentWizzards) => tournamentWizzards.house === 'Slytherin' )
+  const redTeamWizzardChoiced = tournamentWizzards.filter((tournamentWizzards) => tournamentWizzards.house === 'Gryffindor' )
 
-  const [yellowCard, setYellowCard] = useState(Math.random(yellowTeam))
-  const [blueCard, setBlueCard] = useState(Math.random(blueTeam))
-  const [redCard, setRedCard] = useState(Math.random(redTeam))
+  const [yellowCardRandomWizzard, setYellowCardRandomWizzard] = useState(Math.floor(Math.random() * (yellowTeamWizzardChoiced.length - 0 ) + 0))
+  const [blueCardRandomWizzard, setBlueCardRandomWizzard] = useState(Math.floor(Math.random() * (blueTeamWizzardChoiced.length - 0 ) + 0))
+  const [redCardRandomWizzard, setRedCardRandomWizzard] = useState(Math.floor(Math.random() * (redTeamWizzardChoiced.length - 0 ) + 0))
 
   function randomYellowCard() {
-    setYellowCard(Math.random(yellowTeam))
+    setYellowCardRandomWizzard(Math.floor(Math.random() * (yellowTeamWizzardChoiced.length - 0 ) + 0))
   }
   function randomBlueCard() {
-    setBlueCard(Math.random(blueTeam))
+    setBlueCardRandomWizzard(Math.floor(Math.random() * (blueTeamWizzardChoiced.length - 0 ) + 0))
   }
   function randomRedCard() {
-    setRedCard(Math.random(redTeam))
+    setRedCardRandomWizzard(Math.floor(Math.random() * (redTeamWizzardChoiced.length - 0 ) + 0))
   }
 
   return (
     <div>
       <div className='card-container'>
-        <YellowCardInfo yellowCard={yellowCard}/>
-        <BlueCardInfo blueCard={blueCard}/> 
-        <RedCardInfo redCard={redCard}/>  
+        <YellowCardInfo yellowCardRandomWizzard={yellowCardRandomWizzard} yellowTeamWizzardChoiced={yellowTeamWizzardChoiced}/>
+        <BlueCardInfo blueCardRandomWizzard={blueCardRandomWizzard} blueTeamWizzardChoiced={blueTeamWizzardChoiced}/> 
+        <RedCardInfo redCardRandomWizzard={redCardRandomWizzard} redTeamWizzardChoiced={redTeamWizzardChoiced}/>  
       </div>
       <ButtonComponent onClick={() => {
         randomYellowCard()
