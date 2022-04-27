@@ -27,6 +27,7 @@ function CardContainer({tournamentWizzards}) {
   }
 
   return (
+
     <div>
       <div className='card-container'>
         <YellowCardInfo yellowCardRandomWizzard={yellowCardRandomWizzard} yellowTeamWizzardChoiced={yellowTeamWizzardChoiced}/>
@@ -38,6 +39,7 @@ function CardContainer({tournamentWizzards}) {
         randomBlueCard() 
         randomRedCard()}} >Try Again</ButtonComponent>
     </div> 
+    
   )
 
 }

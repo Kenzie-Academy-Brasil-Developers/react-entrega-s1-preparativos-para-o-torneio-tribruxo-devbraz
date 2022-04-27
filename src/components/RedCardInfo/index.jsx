@@ -12,8 +12,6 @@ function RedCardInfo({redCardRandomWizzard, redTeamWizzardChoiced}) {
       <p className='red-card-house'>{redTeamWizzardChoiced[redCardRandomWizzard].house}</p>
     </div>
 
-    
-
   )
 
 }

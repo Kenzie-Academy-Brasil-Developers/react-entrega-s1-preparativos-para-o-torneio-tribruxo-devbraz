@@ -12,8 +12,6 @@ function YellowCardInfo({yellowCardRandomWizzard, yellowTeamWizzardChoiced}) {
       <p className='yellow-card-house'>{yellowTeamWizzardChoiced[yellowCardRandomWizzard].house}</p>
     </div>
 
-    
-
   )
 
 }
